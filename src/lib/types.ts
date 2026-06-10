@@ -89,6 +89,9 @@ export interface ContentMeta {
   image?: string;
   // For journal
   recipe?: string;
+  // Language support
+  lang?: string;
+  translation_of?: string;
   // Raw path
   filePath: string;
   rawContent: string;

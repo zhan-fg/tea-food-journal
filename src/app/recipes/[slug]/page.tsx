@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Star, Clock, ArrowLeft, ChevronRight, ExternalLink } from "lucide-react";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { getRecipeBySlug, getAllContent, getRelatedContent, getKnowledgeGraph } from "@/lib/content";
+import { getRecipeBySlug, getAllContent, getRelatedContent, getKnowledgeGraph, getTranslation } from "@/lib/content";
 import { formatDuration, difficultyLabel, categoryLabel } from "@/lib/utils";
 import FlavorMeter from "@/components/recipe/FlavorMeter";
 import IngredientList from "@/components/recipe/IngredientList";
@@ -138,8 +138,23 @@ export default async function RecipePage({ params }: PageProps) {
       </div>
 
       {/* Share button */}
-      <div className="mb-6">
+      <div className="mb-6 flex items-center gap-3">
         <ShareButton recipe={recipe} />
+        {(() => {
+          const translation = getTranslation(slug);
+          if (translation) {
+            const label = translation.lang === "zh" ? "中文" : "English";
+            const href = translation.type === "journal" ? `/journal/${translation.slug}` :
+                         translation.type === "knowledge" ? `/knowledge/${translation.slug}` :
+                         `/recipes/${translation.slug}`;
+            return (
+              <Link href={href} className="text-xs px-3 py-2 rounded-lg border border-tea-300 dark:border-tea-700 text-foreground/60 hover:text-tea-600 hover:border-tea-400 dark:hover:text-tea-400 transition-colors">
+                {label}
+              </Link>
+            );
+          }
+          return null;
+        })()}
       </div>
 
       {/* Summary */}

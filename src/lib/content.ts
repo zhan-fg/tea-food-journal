@@ -50,6 +50,8 @@ function parseMdxFile(filePath: string): ContentMeta | null {
       type: type as ContentMeta["type"],
       tags: (fm.tags as string[]) || [],
       summary: (fm.summary as string) || undefined,
+      lang: (fm.lang as string) || undefined,
+      translation_of: (fm.translation_of as string) || undefined,
       filePath,
       rawContent: content,
       excerpt: excerpt(content, 150) || (fm.summary as string) || "",
@@ -507,6 +509,26 @@ export function getRandomRecipe(): ContentMeta | null {
   );
   if (all.length === 0) return null;
   return all[Math.floor(Math.random() * all.length)];
+}
+
+/**
+ * Find a translation for a given content item.
+ * Returns the counterpart in the other language, if it exists.
+ */
+export function getTranslation(slug: string): ContentMeta | null {
+  const all = getAllContent();
+  // First check: does this item have a translation_of field?
+  const item = all.find((c) => c.slug === slug);
+  if (item?.translation_of) {
+    return all.find((c) => c.slug === item.translation_of) || null;
+  }
+  // Second check: does another item have translation_of pointing to this?
+  return all.find((c) => c.translation_of === slug) || null;
+}
+
+/** Get content filtered by language */
+export function getContentByLang(lang: string): ContentMeta[] {
+  return getAllContent().filter((c) => c.lang === lang || !c.lang);
 }
 
 /**
