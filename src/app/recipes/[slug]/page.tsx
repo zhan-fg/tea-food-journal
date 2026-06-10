@@ -8,6 +8,7 @@ import FlavorMeter from "@/components/recipe/FlavorMeter";
 import IngredientList from "@/components/recipe/IngredientList";
 import EquipmentList from "@/components/recipe/EquipmentList";
 import RecipeCard from "@/components/recipe/RecipeCard";
+import ShareButton from "@/components/recipe/ShareButton";
 import StructuredData from "@/components/StructuredData";
 import { MarkdownContent } from "./MarkdownContent";
 
@@ -134,6 +135,11 @@ export default async function RecipePage({ params }: PageProps) {
             耗时：{formatDuration(recipe.time)}
           </span>
         )}
+      </div>
+
+      {/* Share button */}
+      <div className="mb-6">
+        <ShareButton recipe={recipe} />
       </div>
 
       {/* Summary */}
