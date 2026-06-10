@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tea-food-journal.vercel.app/sitemap.xml
+
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+
+User-agent: Google-Extended
+Allow: /

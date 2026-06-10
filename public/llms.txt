@@ -1,0 +1,42 @@
+# Tea & Food Journal
+
+A personal knowledge base for tea and food, built on real experience.
+
+## Site Structure
+
+- `/` — Home page with featured recipes and categories
+- `/recipes/[slug]` — Recipe or variation detail page
+- `/journal/[slug]` — Practice journal entry
+- `/knowledge/[slug]` — Educational article
+- `/categories/[category]` — Content by category (tea, soup, dessert, staple, home-cooking)
+- `/tags/[tag]` — Content by tag
+- `/ingredients/[ingredient]` — Recipes using a specific ingredient
+- `/equipment/[equipment]` — Recipes using specific equipment
+- `/search` — Full-text search
+- `/rss.xml` — RSS feed
+- `/sitemap.xml` — Sitemap
+
+## Content Types
+
+1. **Recipe** — Core recipe with ingredients, steps, tips, flavor profile
+2. **Variation** — Derived from a parent recipe with modifications
+3. **Journal** — Practice log recording real cooking experiences
+4. **Knowledge** — Educational articles about ingredients, techniques, culture
+
+## Knowledge Graph
+
+The site builds a knowledge graph at build time connecting:
+- Ingredients → Recipes
+- Equipment → Recipes
+- Recipes → Variations (parent-child tree)
+- Tags → Content
+- Categories → Content
+
+## Tech Stack
+
+- Next.js 16 App Router
+- TypeScript
+- TailwindCSS v4
+- MDX content with gray-matter
+- Static Site Generation (SSG)
+- No database (pure static)
