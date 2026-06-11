@@ -19,8 +19,13 @@ function normalize(v: unknown): unknown {
   if (v instanceof Date) return v.toISOString().slice(0, 10);
   if (Array.isArray(v)) return v.map(normalize);
   if (v && typeof v === "object") {
+    // Detect YAML-misparsed colon-strings like "First steep: 15s" → {First steep: "15s"}
+    const entries = Object.entries(v as Record<string, unknown>);
+    if (entries.length === 1 && typeof entries[0][1] === "string") {
+      return `${entries[0][0]}: ${entries[0][1]}`;
+    }
     const obj: Record<string, unknown> = {};
-    for (const [k, val] of Object.entries(v as Record<string, unknown>)) {
+    for (const [k, val] of entries) {
       obj[k] = normalize(val);
     }
     return obj;
