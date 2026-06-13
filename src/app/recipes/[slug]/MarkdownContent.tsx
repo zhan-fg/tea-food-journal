@@ -127,6 +127,24 @@ export function MarkdownContent({ content }: MarkdownContentProps) {
       continue;
     }
 
+    // Image: ![alt](url)
+    const imageMatch = line.match(/^!\[(.+?)\]\((.+?)\)$/);
+    if (imageMatch) {
+      elements.push(
+        <div key={i} className="my-4 rounded-lg overflow-hidden max-w-md">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={imageMatch[2]}
+            alt={imageMatch[1]}
+            className="w-full rounded-lg"
+            loading="lazy"
+          />
+        </div>
+      );
+      i++;
+      continue;
+    }
+
     // Empty line
     if (line.trim() === "") {
       i++;
