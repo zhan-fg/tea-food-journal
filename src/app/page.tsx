@@ -1,9 +1,26 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { Search, ArrowRight } from "lucide-react";
 import { getAllContent, getTopRecipes, getLatestContent, getKnowledgeGraph } from "@/lib/content";
 import RecipeCard from "@/components/recipe/RecipeCard";
 import { RandomRecipeLink } from "@/components/RandomRecipeLink";
 import { categoryLabel } from "@/lib/utils";
+
+export const metadata: Metadata = {
+  title: "Tea & Food Journal — 茶饮美食手册",
+  description:
+    "记录每一次真实制作体验的茶饮美食知识库。茶饮配方、家常菜谱、养生汤品、甜品烘焙，来自真实厨房经验。",
+  keywords: [
+    "茶饮", "食谱", "家常菜", "养生汤", "甜品",
+    "美食", "配方", "厨房", "烹饪", "茶文化",
+  ],
+  openGraph: {
+    title: "Tea & Food Journal — 茶饮美食手册",
+    description:
+      "记录每一次真实制作体验的茶饮美食知识库。茶饮配方、家常菜谱、养生汤品、甜品烘焙。",
+    type: "website",
+  },
+};
 
 const FEATURED_CATEGORIES = [
   { key: "tea" },
