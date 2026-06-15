@@ -1,10 +1,34 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Search, ArrowRight } from "lucide-react";
-import { getAllContent, getTopRecipes, getLatestContent, getKnowledgeGraph } from "@/lib/content";
+import { getAllContent, getContentByLang, getKnowledgeGraph } from "@/lib/content";
 import RecipeCard from "@/components/recipe/RecipeCard";
 import { RandomRecipeLink } from "@/components/RandomRecipeLink";
 import { categoryLabel } from "@/lib/utils";
+import { getLang } from "@/lib/lang";
+
+const HOME_TEXT = {
+  zh: {
+    hero: "记录每一次真实制作体验",
+    search: "搜索配方",
+    featured: "热门推荐",
+    viewAll: "查看全部",
+    latest: "最新更新",
+    categories: "分类",
+    empty: "暂无配方，开始添加你的第一个配方吧",
+    count: "篇",
+  },
+  en: {
+    hero: "Documenting every real cooking experience",
+    search: "Search recipes",
+    featured: "Top Picks",
+    viewAll: "View all",
+    latest: "Latest Updates",
+    categories: "Categories",
+    empty: "No recipes yet. Add your first one!",
+    count: "",
+  },
+};
 
 export const metadata: Metadata = {
   title: "Tea & Food Journal — 茶饮美食手册",
@@ -30,16 +54,23 @@ const FEATURED_CATEGORIES = [
   { key: "home-cooking" },
 ];
 
-export default function HomePage() {
-  const content = getAllContent();
-  const topRecipes = getTopRecipes(6);
-  const latest = getLatestContent(5);
+export default async function HomePage() {
+  const lang = await getLang();
+  const t = HOME_TEXT[lang];
+  const allContent = getContentByLang(lang);
+  const content = allContent.filter(
+    (c) => c.type === "recipe" || c.type === "variation"
+  );
+  const topRecipes = content
+    .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+    .slice(0, 6);
+  const latest = allContent.slice(0, 5);
   const graph = getKnowledgeGraph();
 
   // Get available categories from actual content
   const availableCategories = [...new Set(
     content
-      .filter((c) => c.category && (c.type === "recipe" || c.type === "variation"))
+      .filter((c) => c.category)
       .map((c) => c.category!)
   )];
 
@@ -51,27 +82,21 @@ export default function HomePage() {
           Tea &amp; Food Journal
         </h1>
         <p className="text-lg text-foreground/60 mb-8 max-w-lg mx-auto">
-          记录每一次真实制作体验
+          {t.hero}
         </p>
         <Link
           href="/search"
           className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-tea-300 dark:border-tea-700 bg-white dark:bg-tea-900/20 text-foreground/70 hover:border-tea-500 hover:text-tea-600 dark:hover:text-tea-400 transition-all shadow-sm hover:shadow-md"
         >
           <Search className="h-4 w-4" />
-          <span>搜索配方</span>
+          <span>{t.search}</span>
         </Link>
       </section>
 
-      {/* Hot Tea Drinks */}
+      {/* Featured */}
       <section>
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-bold text-foreground">热门茶饮</h2>
-          <Link
-            href="/categories/tea"
-            className="text-sm text-tea-600 dark:text-tea-400 hover:underline inline-flex items-center gap-1"
-          >
-            查看全部 <ArrowRight className="h-3 w-3" />
-          </Link>
+          <h2 className="text-2xl font-bold text-foreground">{t.featured}</h2>
         </div>
         {topRecipes.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -80,14 +105,14 @@ export default function HomePage() {
             ))}
           </div>
         ) : (
-          <p className="text-foreground/40 text-center py-8">暂无配方，开始添加你的第一个配方吧</p>
+          <p className="text-foreground/40 text-center py-8">{t.empty}</p>
         )}
       </section>
 
       {/* Latest Updates */}
       {latest.length > 0 && (
         <section>
-          <h2 className="text-2xl font-bold text-foreground mb-6">最新更新</h2>
+          <h2 className="text-2xl font-bold text-foreground mb-6">{t.latest}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {latest.slice(0, 3).map((item) => (
               <RecipeCard key={item.slug} recipe={item} />
@@ -98,11 +123,13 @@ export default function HomePage() {
 
       {/* Categories */}
       <section>
-        <h2 className="text-2xl font-bold text-foreground mb-6">分类</h2>
+        <h2 className="text-2xl font-bold text-foreground mb-6">{t.categories}</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
           {FEATURED_CATEGORIES.map(({ key }) => {
             const hasContent = availableCategories.includes(key);
-            const count = graph.categoryIndex.get(key)?.length || 0;
+            const count = graph.categoryIndex.get(key)?.filter(
+              (c) => c.lang === lang || !c.lang
+            ).length || 0;
             return (
               <Link
                 key={key}
@@ -117,7 +144,7 @@ export default function HomePage() {
                   {categoryLabel(key)}
                 </span>
                 {count > 0 && (
-                  <span className="text-xs text-foreground/40">{count} 篇</span>
+                  <span className="text-xs text-foreground/40">{count} {t.count}</span>
                 )}
               </Link>
             );
@@ -127,7 +154,7 @@ export default function HomePage() {
 
       {/* Random Discovery */}
       <section className="text-center py-8">
-        <RandomRecipeLink recipes={content.filter((c) => c.type === "recipe" || c.type === "variation")} />
+        <RandomRecipeLink recipes={content} />
       </section>
     </div>
   );
