@@ -1,15 +1,16 @@
 import Link from "next/link";
-import { Search, Shuffle, ArrowRight } from "lucide-react";
+import { Search, ArrowRight } from "lucide-react";
 import { getAllContent, getTopRecipes, getLatestContent, getKnowledgeGraph } from "@/lib/content";
 import RecipeCard from "@/components/recipe/RecipeCard";
+import { RandomRecipeLink } from "@/components/RandomRecipeLink";
 import { categoryLabel } from "@/lib/utils";
 
 const FEATURED_CATEGORIES = [
-  { key: "tea", icon: "🍵" },
-  { key: "soup", icon: "🍲" },
-  { key: "dessert", icon: "🍰" },
-  { key: "staple", icon: "🍚" },
-  { key: "home-cooking", icon: "🥘" },
+  { key: "tea" },
+  { key: "soup" },
+  { key: "dessert" },
+  { key: "staple" },
+  { key: "home-cooking" },
 ];
 
 export default function HomePage() {
@@ -82,7 +83,7 @@ export default function HomePage() {
       <section>
         <h2 className="text-2xl font-bold text-foreground mb-6">分类</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-          {FEATURED_CATEGORIES.map(({ key, icon }) => {
+          {FEATURED_CATEGORIES.map(({ key }) => {
             const hasContent = availableCategories.includes(key);
             const count = graph.categoryIndex.get(key)?.length || 0;
             return (
@@ -95,7 +96,6 @@ export default function HomePage() {
                     : "border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/20 opacity-60"
                 }`}
               >
-                <span className="text-3xl">{icon}</span>
                 <span className="text-sm font-medium text-foreground/80">
                   {categoryLabel(key)}
                 </span>
@@ -110,13 +110,7 @@ export default function HomePage() {
 
       {/* Random Discovery */}
       <section className="text-center py-8">
-        <Link
-          href={`/recipes/${content.filter((c) => c.type === "recipe" || c.type === "variation")[Math.floor(Math.random() * content.filter((c) => c.type === "recipe" || c.type === "variation").length)]?.slug || "#"}`}
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-tea-300 dark:border-tea-700 bg-gradient-to-r from-warm-50 to-tea-50 dark:from-tea-900/20 dark:to-tea-800/10 hover:shadow-md transition-all text-foreground/70 hover:text-tea-600 dark:hover:text-tea-400"
-        >
-          <Shuffle className="h-4 w-4" />
-          <span>随机发现</span>
-        </Link>
+        <RandomRecipeLink recipes={content.filter((c) => c.type === "recipe" || c.type === "variation")} />
       </section>
     </div>
   );
