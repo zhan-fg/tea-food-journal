@@ -1,42 +1,176 @@
 # Tea & Food Journal
 
-A personal knowledge base for tea and food, built on real experience.
+> A personal knowledge base for tea and food, built on real experience. Bilingual (中文/English) recipes with ingredients, steps, tips, flavor profiles, and video tutorials.
+
+Base URL: https://tea-food-journal.vercel.app
 
 ## Site Structure
 
-- `/` — Home page with featured recipes and categories
-- `/recipes/[slug]` — Recipe or variation detail page
+- `/` — Home with featured recipes and categories
+- `/recipes/[slug]` — Recipe detail (zh + en versions, language switch available)
 - `/journal/[slug]` — Practice journal entry
 - `/knowledge/[slug]` — Educational article
 - `/categories/[category]` — Content by category (tea, soup, dessert, staple, home-cooking)
 - `/tags/[tag]` — Content by tag
-- `/ingredients/[ingredient]` — Recipes using a specific ingredient
-- `/equipment/[equipment]` — Recipes using specific equipment
+- `/ingredients/[ingredient]` — Recipes using an ingredient
+- `/equipment/[equipment]` — Recipes using equipment
 - `/search` — Full-text search
 - `/rss.xml` — RSS feed
 - `/sitemap.xml` — Sitemap
 
 ## Content Types
 
-1. **Recipe** — Core recipe with ingredients, steps, tips, flavor profile
-2. **Variation** — Derived from a parent recipe with modifications
-3. **Journal** — Practice log recording real cooking experiences
-4. **Knowledge** — Educational articles about ingredients, techniques, culture
+1. Recipe — Core recipe with ingredients, steps, tips, flavor profile, optional video tutorial
+2. Variation — Derived from a parent recipe with modifications
+3. Journal — Practice log recording real cooking experiences
+4. Knowledge — Educational articles about ingredients, techniques, culture
+
+## Recipe Catalog (13 recipes)
+
+### 香蕉面包
+- Ingredients: 熟透香蕉, 低筋面粉, 鸡蛋, 细砂糖, 牛奶, 食用油, 泡打粉
+- Tags: 烘焙, 香蕉, 甜品, 零失败
+- Category: dessert
+- Difficulty: easy
+- Time: 55 min
+- Summary: 消耗熟透香蕉的经典烘焙。面糊做法简单，无需打发，新手也能一次成功，烤出来湿润香甜。
+- 中文: https://tea-food-journal.vercel.app/recipes/banana-bread
+- English: https://tea-food-journal.vercel.app/recipes/banana-bread-en
+
+### 陈皮普洱
+- Ingredients: 陈皮, 普洱熟茶, 水
+- Tags: 茶饮, 消食, 理气
+- Category: tea
+- Difficulty: easy
+- Time: 15 min
+- Summary: 广东经典搭配。陈皮的果香与普洱的醇厚完美结合，饭后一杯解腻消食。
+- 中文: https://tea-food-journal.vercel.app/recipes/chenpi-puer
+- English: https://tea-food-journal.vercel.app/recipes/chenpi-puer-en
+
+### 巧克力豆曲奇
+- Ingredients: 中筋面粉, 小苏打, 盐, 软化无盐黄油, 细砂糖, 红糖, 鸡蛋, 香草精, 半甜巧克力豆, 核桃碎（可选）
+- Tags: 烘焙, 曲奇, 巧克力, 零食
+- Category: dessert
+- Difficulty: easy
+- Time: 25 min
+- Summary: 经典美式巧克力豆曲奇，外缘酥脆、内心软韧，黄油打发到位是关键。
+- 中文: https://tea-food-journal.vercel.app/recipes/chocolate-chip-cookies
+- English: https://tea-food-journal.vercel.app/recipes/chocolate-chip-cookies-en
+
+### 公瑾爆蛋
+- Ingredients: 鸡蛋, 番茄酱, 酱油, 蚝油, 白糖, 清水, 大蒜, 香葱
+- Tags: 家常菜, 下饭菜, 快手菜, 糖醋
+- Category: home-cooking
+- Difficulty: easy
+- Time: 20 min
+- Summary: 溏心荷包蛋裹上浓郁番茄糖醋酱汁，酸甜开胃，盖在米饭上就是一碗满足。十分钟上桌的快手硬菜。
+- 中文: https://tea-food-journal.vercel.app/recipes/gongjin-eggs
+- English: https://tea-food-journal.vercel.app/recipes/gongjin-eggs-en
+
+### 懒人焖饭
+- Ingredients: 大米, 胡萝卜, 土豆, 香菇, 腊肠, 玉米粒, 青豆粒, 生抽, 香油
+- Tags: 家常菜, 快手菜, 一锅出, 懒人料理
+- Category: home-cooking
+- Difficulty: easy
+- Time: 40 min
+- Summary: 所有食材一锅焖，电饭煲搞定一顿饭。腊肠的油脂渗透每一粒米，搭配蔬菜的清甜，简单却无比满足。
+- 中文: https://tea-food-journal.vercel.app/recipes/lazy-rice-cooker-meal
+- English: https://tea-food-journal.vercel.app/recipes/lazy-rice-cooker-meal-en
+
+### 肉霸薯条
+- Ingredients: 土豆, 玉米淀粉, 芝士碎, 盐, 黑胡椒, 猪肉末, 西红柿, 大蒜, 番茄酱, 生抽, 蚝油, 白糖, 芝士酱
+- Tags: 家常菜, 小吃, 芝士, 炸物
+- Category: home-cooking
+- Difficulty: medium
+- Time: 60 min
+- Summary: 自制粗薯条+浓郁番茄肉酱+拉丝芝士，肉酱加到爆的巨无霸薯条。咬下去外酥里嫩，肉香芝士双重暴击。
+- 中文: https://tea-food-journal.vercel.app/recipes/meat-monster-fries
+- English: https://tea-food-journal.vercel.app/recipes/meat-monster-fries-en
+
+### 菠萝排骨
+- Ingredients: 排骨, 菠萝, 葱, 蚝油, 生抽, 老抽
+- Tags: 家常菜, 排骨, 水果入菜, 高压锅
+- Category: home-cooking
+- Difficulty: easy
+- Time: 20 min
+- Summary: 菠萝和排骨一起压12分钟，果香渗入骨髓，排骨软烂脱骨，酱汁浓稠酸甜。不用焯水更省事。
+- 中文: https://tea-food-journal.vercel.app/recipes/pineapple-ribs
+- English: https://tea-food-journal.vercel.app/recipes/pineapple-ribs-en
+
+### 土豆片煎饼果子
+- Ingredients: 土豆, 鸡蛋, 淀粉肠, 火鸡面, 生菜, 大葱, 调味酱料
+- Tags: 家常菜, 创意料理, 土豆, 早餐
+- Category: home-cooking
+- Difficulty: medium
+- Time: 25 min
+- Summary: 土豆片代替面饼的新派煎饼果子，鸡蛋裹土豆饼底，夹入淀粉肠和火鸡面，一口下去超满足。
+- 中文: https://tea-food-journal.vercel.app/recipes/potato-pancake-wrap
+- English: https://tea-food-journal.vercel.app/recipes/potato-pancake-wrap-en
+
+### 豚骨拉面汤底
+- Ingredients: 猪腿骨, 猪蹄膀, 水, 大蒜, 姜
+- Tags: 拉面, 汤底, 豚骨, 日式
+- Category: soup
+- Difficulty: hard
+- Time: 100 min
+- Summary: 浓白醇厚的豚骨汤底，用高压锅大幅缩短传统熬煮时间，在家也能做出拉面店风味。
+- 中文: https://tea-food-journal.vercel.app/recipes/ramen-broth
+- English: https://tea-food-journal.vercel.app/recipes/ramen-broth-en
+
+### 红枣姜茶
+- Ingredients: 红枣, 生姜, 水
+- Tags: 暖身, 茶饮, 驱寒, 冬季
+- Category: tea
+- Difficulty: easy
+- Time: 330 min
+- Summary: 红枣茶的冬季升级版。在原有配方基础上增加生姜，驱寒暖身效果加倍，特别适合冬季饮用。
+- 中文: https://tea-food-journal.vercel.app/recipes/red-date-ginger-tea
+- English: https://tea-food-journal.vercel.app/recipes/red-date-ginger-tea-en
+
+### 红枣茶
+- Ingredients: 红枣, 水
+- Tags: 暖身, 茶饮, 补血
+- Category: tea
+- Difficulty: easy
+- Time: 320 min
+- Summary: 最简单的养生茶饮。红枣的天然甜味在长时间焖泡后充分释放，无需加糖。
+- 中文: https://tea-food-journal.vercel.app/recipes/red-date-tea
+- English: https://tea-food-journal.vercel.app/recipes/red-date-tea-en
+
+### 寿司饭
+- Ingredients: 日式短粒米, 冷水, 米醋, 细砂糖, 盐
+- Tags: 寿司, 米饭, 日式, 基础
+- Category: staple
+- Difficulty: medium
+- Time: 60 min
+- Summary: 寿司的灵魂是醋饭。掌握米、醋、糖、盐的比例与"切拌+扇凉"手法，就能做出莹亮饱满的寿司饭。
+- 中文: https://tea-food-journal.vercel.app/recipes/sushi-rice
+- English: https://tea-food-journal.vercel.app/recipes/sushi-rice-en
+
+### 芥末虾球
+- Ingredients: 大虾, 鸡蛋黄, 葱, 姜, 面粉, 蛋黄酱, 蜂蜜芥末酱, 欧芹碎
+- Tags: 家常菜, 虾, 宴客菜, 炸物
+- Category: home-cooking
+- Difficulty: medium
+- Time: 30 min
+- Summary: 外酥里嫩的炸虾球，裹上蜂蜜芥末酱汁，酸甜中带一丝芥末的刺激。颜值在线，宴客拿得出手的硬菜。
+- 中文: https://tea-food-journal.vercel.app/recipes/wasabi-shrimp-balls
+- English: https://tea-food-journal.vercel.app/recipes/wasabi-shrimp-balls-en
+
+## Knowledge Articles (2)
+
+- Gray Dates vs. Hebei Jujubes — What's the Difference?: https://tea-food-journal.vercel.app/knowledge/jujube-types-en
+- 灰枣和五堡枣有什么区别: https://tea-food-journal.vercel.app/knowledge/jujube-types
+
+## Practice Journal (2)
+
+- Red Date Tea — Attempt: https://tea-food-journal.vercel.app/journal/red-date-tea-2026-06-10-en
+- 第3次尝试红枣茶: https://tea-food-journal.vercel.app/journal/red-date-tea-2026-06-10
 
 ## Knowledge Graph
 
-The site builds a knowledge graph at build time connecting:
-- Ingredients → Recipes
-- Equipment → Recipes
-- Recipes → Variations (parent-child tree)
-- Tags → Content
-- Categories → Content
+The site builds a knowledge graph at build time connecting ingredients, equipment, tags, categories, and recipe variations.
 
 ## Tech Stack
 
-- Next.js 16 App Router
-- TypeScript
-- TailwindCSS v4
-- MDX content with gray-matter
-- Static Site Generation (SSG)
-- No database (pure static)
+- Next.js App Router, TypeScript, TailwindCSS, MDX content with gray-matter, Static Site Generation, no database

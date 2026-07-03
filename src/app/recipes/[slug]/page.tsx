@@ -9,6 +9,7 @@ import IngredientList from "@/components/recipe/IngredientList";
 import EquipmentList from "@/components/recipe/EquipmentList";
 import RecipeCard from "@/components/recipe/RecipeCard";
 import ShareButton from "@/components/recipe/ShareButton";
+import VideoEmbed from "@/components/recipe/VideoEmbed";
 import StructuredData from "@/components/StructuredData";
 import { MarkdownContent } from "./MarkdownContent";
 
@@ -29,13 +30,26 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!data) return { title: "未找到" };
 
   const { recipe } = data;
+  const translation = getTranslation(slug);
+  const canonical = `/recipes/${slug}`;
+  const languages: Record<string, string> = {};
+  if (recipe.lang === "en") {
+    languages["en"] = canonical;
+    if (translation) languages["zh-CN"] = `/recipes/${translation.slug}`;
+  } else {
+    languages["zh-CN"] = canonical;
+    if (translation) languages["en"] = `/recipes/${translation.slug}`;
+  }
+
   return {
     title: recipe.title,
     description: recipe.summary || `${recipe.title} - 详细配方与制作步骤`,
+    alternates: { canonical, languages },
     openGraph: {
       title: recipe.title,
       description: recipe.summary,
       type: "article",
+      locale: recipe.lang === "en" ? "en_US" : "zh_CN",
     },
   };
 }
@@ -162,6 +176,20 @@ export default async function RecipePage({ params }: PageProps) {
         <div className="bg-tea-50 dark:bg-tea-900/20 rounded-xl p-4 mb-8 border border-tea-200 dark:border-tea-800">
           <p className="text-foreground/80 leading-relaxed">{recipe.summary}</p>
         </div>
+      )}
+
+      {/* Video tutorial */}
+      {(recipe.videoBilibili || recipe.videoYoutube) && (
+        <section className="mb-8">
+          <h2 className="text-xl font-semibold text-foreground mb-4">
+            {recipe.lang === "en" ? "Video Tutorial" : "视频教程"}
+          </h2>
+          <VideoEmbed
+            bilibili={recipe.videoBilibili}
+            youtube={recipe.videoYoutube}
+            lang={recipe.lang}
+          />
+        </section>
       )}
 
       {/* Flavor Profile */}

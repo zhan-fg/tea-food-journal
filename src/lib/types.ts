@@ -43,6 +43,8 @@ export interface RecipeFrontmatter {
   tips: string[];
   variations?: string[];
   image?: string;
+  videoBilibili?: string;
+  videoYoutube?: string;
 }
 
 export interface JournalFrontmatter {
@@ -87,6 +89,8 @@ export interface ContentMeta {
   variations?: string[];
   related?: string[];
   image?: string;
+  videoBilibili?: string;
+  videoYoutube?: string;
   // For journal
   recipe?: string;
   // Language support

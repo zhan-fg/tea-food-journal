@@ -73,6 +73,8 @@ function parseMdxFile(filePath: string): ContentMeta | null {
       base.tips = (fm.tips as string[]) || [];
       base.parent = fm.parent as string | undefined;
       base.variations = (fm.variations as string[]) || [];
+      base.videoBilibili = fm.video_bilibili as string | undefined;
+      base.videoYoutube = fm.video_youtube as string | undefined;
 
       // Generate ingredient slugs
       if (base.ingredients) {
