@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { Search, Moon, Sun, Menu, X, Utensils, Globe } from "lucide-react";
 
 function getCookie(name: string): string | null {
@@ -35,6 +35,7 @@ const NAV_LABELS: Record<Lang, Record<string, string>> = {
 
 export default function Header() {
   const router = useRouter();
+  const pathname = usePathname();
   const [dark, setDark] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [lang, setLang] = useState<Lang>("zh");
@@ -53,12 +54,25 @@ export default function Header() {
     localStorage.setItem("theme", next ? "dark" : "light");
   };
 
-  const toggleLang = useCallback(() => {
+  const toggleLang = useCallback(async () => {
     const next = lang === "zh" ? "en" : "zh";
     setCookie("lang", next);
     setLang(next);
+    // On detail pages, navigate to the translated page; elsewhere, refresh.
+    try {
+      const res = await fetch(
+        `/api/translate?path=${encodeURIComponent(pathname)}`
+      );
+      const data = await res.json();
+      if (data.translatedPath) {
+        router.push(data.translatedPath);
+        return;
+      }
+    } catch {
+      // fall through to refresh
+    }
     router.refresh();
-  }, [lang, router]);
+  }, [lang, router, pathname]);
 
   const labels = NAV_LABELS[lang];
   const langLabel = lang === "zh" ? "EN" : "中文";
