@@ -25,7 +25,7 @@ Base URL: https://tea-food-journal.vercel.app
 3. Journal — Practice log recording real cooking experiences
 4. Knowledge — Educational articles about ingredients, techniques, culture
 
-## Recipe Catalog (13 recipes)
+## Recipe Catalog (16 recipes)
 
 ### 香蕉面包
 - Ingredients: 熟透香蕉, 低筋面粉, 鸡蛋, 细砂糖, 牛奶, 食用油, 泡打粉
@@ -47,6 +47,16 @@ Base URL: https://tea-food-journal.vercel.app
 - 中文: https://tea-food-journal.vercel.app/recipes/chenpi-puer
 - English: https://tea-food-journal.vercel.app/recipes/chenpi-puer-en
 
+### 经典墨西哥辣豆牛肉酱
+- Ingredients: 牛绞肉, 洋葱, 大蒜, 红甜椒, 番茄罐头（碎番茄）, 红腰豆罐头, 番茄膏, 孜然粉, 烟熏红椒粉, 辣椒粉, 牛至, 盐, 黑胡椒, 橄榄油, 牛肉高汤
+- Tags: 墨西哥, 牛肉, 炖菜, 聚会
+- Category: home-cooking
+- Difficulty: easy
+- Time: 60 min
+- Summary: 一锅炖出的经典德州风味辣椒牛肉酱，香料浓郁、肉酱丰腴。配米饭、玉米片或夹面包都绝佳。
+- 中文: https://tea-food-journal.vercel.app/recipes/chili-con-carne
+- English: https://tea-food-journal.vercel.app/recipes/chili-con-carne-en
+
 ### 巧克力豆曲奇
 - Ingredients: 中筋面粉, 小苏打, 盐, 软化无盐黄油, 细砂糖, 红糖, 鸡蛋, 香草精, 半甜巧克力豆, 核桃碎（可选）
 - Tags: 烘焙, 曲奇, 巧克力, 零食
@@ -56,6 +66,16 @@ Base URL: https://tea-food-journal.vercel.app
 - Summary: 经典美式巧克力豆曲奇，外缘酥脆、内心软韧，黄油打发到位是关键。
 - 中文: https://tea-food-journal.vercel.app/recipes/chocolate-chip-cookies
 - English: https://tea-food-journal.vercel.app/recipes/chocolate-chip-cookies-en
+
+### 无麸质披萨饼底
+- Ingredients: 杏仁粉, 木薯淀粉, 洋车前子壳粉, 泡打粉, 盐, 橄榄油, 温水, 苹果醋
+- Tags: 无麸质, 披萨, 烘焙, 健康
+- Category: staple
+- Difficulty: medium
+- Time: 45 min
+- Summary: 用杏仁粉和木薯淀粉替代小麦粉，烤出外脆内软的披萨饼底。麸质不耐受也能放心吃披萨。
+- 中文: https://tea-food-journal.vercel.app/recipes/gluten-free-pizza-crust
+- English: https://tea-food-journal.vercel.app/recipes/gluten-free-pizza-crust-en
 
 ### 公瑾爆蛋
 - Ingredients: 鸡蛋, 番茄酱, 酱油, 蚝油, 白糖, 清水, 大蒜, 香葱
@@ -86,6 +106,16 @@ Base URL: https://tea-food-journal.vercel.app
 - Summary: 自制粗薯条+浓郁番茄肉酱+拉丝芝士，肉酱加到爆的巨无霸薯条。咬下去外酥里嫩，肉香芝士双重暴击。
 - 中文: https://tea-food-journal.vercel.app/recipes/meat-monster-fries
 - English: https://tea-food-journal.vercel.app/recipes/meat-monster-fries-en
+
+### 味噌三文鱼
+- Ingredients: 三文鱼排, 白味噌, 味醂, 清酒（或料酒）, 白糖, 酱油, 芝麻油, 白芝麻, 小葱
+- Tags: 日式, 三文鱼, 快手菜, 味噌
+- Category: home-cooking
+- Difficulty: easy
+- Time: 30 min
+- Summary: 白味噌的咸甜鲜渗透三文鱼每一丝纹理，外焦里嫩，10分钟预处理 + 10分钟煎制即可上桌。
+- 中文: https://tea-food-journal.vercel.app/recipes/miso-glazed-salmon
+- English: https://tea-food-journal.vercel.app/recipes/miso-glazed-salmon-en
 
 ### 菠萝排骨
 - Ingredients: 排骨, 菠萝, 葱, 蚝油, 生抽, 老抽
