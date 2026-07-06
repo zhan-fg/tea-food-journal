@@ -25,7 +25,7 @@ Base URL: https://tea-food-journal.vercel.app
 3. Journal — Practice log recording real cooking experiences
 4. Knowledge — Educational articles about ingredients, techniques, culture
 
-## Recipe Catalog (16 recipes)
+## Recipe Catalog (19 recipes)
 
 ### 香蕉面包
 - Ingredients: 熟透香蕉, 低筋面粉, 鸡蛋, 细砂糖, 牛奶, 食用油, 泡打粉
@@ -37,6 +37,16 @@ Base URL: https://tea-food-journal.vercel.app
 - 中文: https://tea-food-journal.vercel.app/recipes/banana-bread
 - English: https://tea-food-journal.vercel.app/recipes/banana-bread-en
 
+### 经典纽约芝士蛋糕
+- Ingredients: 消化饼干, 无盐黄油, 奶油奶酪, 中筋面粉, 香草精, 酸奶油, 细砂糖, 柠檬皮屑, 鸡蛋
+- Tags: 芝士, 蛋糕, 烘焙, 甜点, 经典
+- Category: dessert
+- Difficulty: medium
+- Time: 90 min
+- Summary: 源自纽约的经典重芝士蛋糕，酥脆饼干底配上如丝绒般顺滑的奶油奶酪馅，酸甜平衡恰到好处，是芝士蛋糕爱好者不可错过的终极配方。
+- 中文: https://tea-food-journal.vercel.app/recipes/cheesecake
+- English: https://tea-food-journal.vercel.app/recipes/cheesecake-en
+
 ### 陈皮普洱
 - Ingredients: 陈皮, 普洱熟茶, 水
 - Tags: 茶饮, 消食, 理气
@@ -46,6 +56,16 @@ Base URL: https://tea-food-journal.vercel.app
 - Summary: 广东经典搭配。陈皮的果香与普洱的醇厚完美结合，饭后一杯解腻消食。
 - 中文: https://tea-food-journal.vercel.app/recipes/chenpi-puer
 - English: https://tea-food-journal.vercel.app/recipes/chenpi-puer-en
+
+### 家常鸡汤面
+- Ingredients: 整鸡, 胡萝卜, 芹菜, 洋葱, 大蒜, 黑胡椒粒, 香叶, 百里香, 鸡蛋面, 橄榄油, 盐
+- Tags: 汤, 鸡肉, 面条, 家常, 暖身
+- Category: soup
+- Difficulty: easy
+- Time: 120 min
+- Summary: 一锅从头熬起的经典鸡汤面，整鸡慢炖出浓郁汤底，配上胡萝卜、芹菜和弹牙鸡蛋面，暖胃又滋补，是东西方都爱的comfort food。
+- 中文: https://tea-food-journal.vercel.app/recipes/chicken-soup
+- English: https://tea-food-journal.vercel.app/recipes/chicken-soup-en
 
 ### 经典墨西哥辣豆牛肉酱
 - Ingredients: 牛绞肉, 洋葱, 大蒜, 红甜椒, 番茄罐头（碎番茄）, 红腰豆罐头, 番茄膏, 孜然粉, 烟熏红椒粉, 辣椒粉, 牛至, 盐, 黑胡椒, 橄榄油, 牛肉高汤
@@ -66,6 +86,16 @@ Base URL: https://tea-food-journal.vercel.app
 - Summary: 经典美式巧克力豆曲奇，外缘酥脆、内心软韧，黄油打发到位是关键。
 - 中文: https://tea-food-journal.vercel.app/recipes/chocolate-chip-cookies
 - English: https://tea-food-journal.vercel.app/recipes/chocolate-chip-cookies-en
+
+### 无麸质面包
+- Ingredients: 无麸质面粉, 木薯淀粉, 杏仁粉, 燕麦粉, 干酵母, 泡打粉, 车前子壳粉, 瓜尔胶, 温水, 黄油, 奇亚籽, 盐, 枫糖浆
+- Tags: 无麸质, 面包, 烘焙, 健康
+- Category: staple
+- Difficulty: medium
+- Time: 150 min
+- Summary: 专为麸质不耐受人群设计的无麸质面包，利用木薯淀粉、杏仁粉和车前子壳粉模拟面筋的弹性与蓬松感，外皮金黄酥脆，内里柔软湿润。
+- 中文: https://tea-food-journal.vercel.app/recipes/gluten-free-bread
+- English: https://tea-food-journal.vercel.app/recipes/gluten-free-bread-en
 
 ### 无麸质披萨饼底
 - Ingredients: 杏仁粉, 木薯淀粉, 洋车前子壳粉, 泡打粉, 盐, 橄榄油, 温水, 苹果醋
