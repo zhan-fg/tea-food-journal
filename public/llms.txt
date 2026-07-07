@@ -25,7 +25,7 @@ Base URL: https://tea-food-journal.vercel.app
 3. Journal — Practice log recording real cooking experiences
 4. Knowledge — Educational articles about ingredients, techniques, culture
 
-## Recipe Catalog (19 recipes)
+## Recipe Catalog (22 recipes)
 
 ### 香蕉面包
 - Ingredients: 熟透香蕉, 低筋面粉, 鸡蛋, 细砂糖, 牛奶, 食用油, 泡打粉
@@ -87,6 +87,16 @@ Base URL: https://tea-food-journal.vercel.app
 - 中文: https://tea-food-journal.vercel.app/recipes/chocolate-chip-cookies
 - English: https://tea-food-journal.vercel.app/recipes/chocolate-chip-cookies-en
 
+### 黄金蛋炒饭
+- Ingredients: 隔夜米饭, 鸡蛋, 葱花, 食用油, 盐, 白胡椒粉, 生抽
+- Tags: 炒饭, 快手, 中式, 家常
+- Category: staple
+- Difficulty: easy
+- Time: 15 min
+- Summary: 粒粒分明、蛋香浓郁的中式蛋炒饭，只需几种最基础的食材，炒出镬气十足的家常美味。
+- 中文: https://tea-food-journal.vercel.app/recipes/fried-rice
+- English: https://tea-food-journal.vercel.app/recipes/fried-rice-en
+
 ### 无麸质面包
 - Ingredients: 无麸质面粉, 木薯淀粉, 杏仁粉, 燕麦粉, 干酵母, 泡打粉, 车前子壳粉, 瓜尔胶, 温水, 黄油, 奇亚籽, 盐, 枫糖浆
 - Tags: 无麸质, 面包, 烘焙, 健康
@@ -116,6 +126,26 @@ Base URL: https://tea-food-journal.vercel.app
 - Summary: 溏心荷包蛋裹上浓郁番茄糖醋酱汁，酸甜开胃，盖在米饭上就是一碗满足。十分钟上桌的快手硬菜。
 - 中文: https://tea-food-journal.vercel.app/recipes/gongjin-eggs
 - English: https://tea-food-journal.vercel.app/recipes/gongjin-eggs-en
+
+### 雨果气泡鸡尾酒
+- Ingredients: 普洛赛克起泡酒, 接骨木花糖浆, 苏打水, 新鲜薄荷叶, 青柠, 冰块
+- Tags: 鸡尾酒, 夏日, 意大利, 气泡酒
+- Category: tea
+- Difficulty: easy
+- Time: 5 min
+- Summary: 源自意大利北部的夏日经典鸡尾酒，接骨木花的清雅花香与普洛赛克的活泼气泡完美交融，清爽怡人。
+- 中文: https://tea-food-journal.vercel.app/recipes/hugo-spritz
+- English: https://tea-food-journal.vercel.app/recipes/hugo-spritz-en
+
+### 千层面汤
+- Ingredients: 牛肉碎, 洋葱, 大蒜, 意面酱, 牛肉汤, 番茄丁罐头, 番茄膏, 意大利综合香料, 千层面碎面, 浓奶油, 帕玛森芝士, 马苏里拉芝士, 橄榄油
+- Tags: 汤, 意大利, 芝士, 快手
+- Category: soup
+- Difficulty: easy
+- Time: 40 min
+- Summary: 经典千层面的汤版——一锅出的懒人做法，保留千层面的浓郁芝士和肉酱风味，暖胃又满足。
+- 中文: https://tea-food-journal.vercel.app/recipes/lasagna-soup
+- English: https://tea-food-journal.vercel.app/recipes/lasagna-soup-en
 
 ### 懒人焖饭
 - Ingredients: 大米, 胡萝卜, 土豆, 香菇, 腊肠, 玉米粒, 青豆粒, 生抽, 香油
