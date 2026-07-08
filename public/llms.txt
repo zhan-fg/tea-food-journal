@@ -25,7 +25,7 @@ Base URL: https://tea-food-journal.vercel.app
 3. Journal — Practice log recording real cooking experiences
 4. Knowledge — Educational articles about ingredients, techniques, culture
 
-## Recipe Catalog (22 recipes)
+## Recipe Catalog (25 recipes)
 
 ### 香蕉面包
 - Ingredients: 熟透香蕉, 低筋面粉, 鸡蛋, 细砂糖, 牛奶, 食用油, 泡打粉
@@ -36,6 +36,16 @@ Base URL: https://tea-food-journal.vercel.app
 - Summary: 消耗熟透香蕉的经典烘焙。面糊做法简单，无需打发，新手也能一次成功，烤出来湿润香甜。
 - 中文: https://tea-food-journal.vercel.app/recipes/banana-bread
 - English: https://tea-food-journal.vercel.app/recipes/banana-bread-en
+
+### 经典浓郁布朗尼
+- Ingredients: 无糖巧克力, 半甜巧克力, 无盐黄油, 鸡蛋, 细砂糖, 盐, 香草精, 中筋面粉, 核桃碎
+- Tags: 布朗尼, 巧克力, 甜点, 烘焙, 美式
+- Category: dessert
+- Difficulty: easy
+- Time: 60 min
+- Summary: 外层微脆、内芯湿润浓郁的美式经典布朗尼，巧克力和黄油的高比例带来极致的罪恶满足感。
+- 中文: https://tea-food-journal.vercel.app/recipes/brownie
+- English: https://tea-food-journal.vercel.app/recipes/brownie-en
 
 ### 经典纽约芝士蛋糕
 - Ingredients: 消化饼干, 无盐黄油, 奶油奶酪, 中筋面粉, 香草精, 酸奶油, 细砂糖, 柠檬皮屑, 鸡蛋
@@ -56,6 +66,16 @@ Base URL: https://tea-food-journal.vercel.app
 - Summary: 广东经典搭配。陈皮的果香与普洱的醇厚完美结合，饭后一杯解腻消食。
 - 中文: https://tea-food-journal.vercel.app/recipes/chenpi-puer
 - English: https://tea-food-journal.vercel.app/recipes/chenpi-puer-en
+
+### 经典鸡肉沙拉
+- Ingredients: 熟鸡胸肉, 芹菜, 红洋葱, 蛋黄酱, 希腊酸奶, 第戎芥末, 柠檬汁, 盐, 黑胡椒粉, 新鲜莳萝
+- Tags: 沙拉, 鸡肉, 快手, 轻食, 三明治
+- Category: home-cooking
+- Difficulty: easy
+- Time: 20 min
+- Summary: 10分钟搞定的万能鸡肉沙拉——可单吃、做三明治或配生菜，清爽不腻，冰箱常备款。
+- 中文: https://tea-food-journal.vercel.app/recipes/chicken-salad
+- English: https://tea-food-journal.vercel.app/recipes/chicken-salad-en
 
 ### 家常鸡汤面
 - Ingredients: 整鸡, 胡萝卜, 芹菜, 洋葱, 大蒜, 黑胡椒粒, 香叶, 百里香, 鸡蛋面, 橄榄油, 盐
@@ -156,6 +176,16 @@ Base URL: https://tea-food-journal.vercel.app
 - Summary: 所有食材一锅焖，电饭煲搞定一顿饭。腊肠的油脂渗透每一粒米，搭配蔬菜的清甜，简单却无比满足。
 - 中文: https://tea-food-journal.vercel.app/recipes/lazy-rice-cooker-meal
 - English: https://tea-food-journal.vercel.app/recipes/lazy-rice-cooker-meal-en
+
+### 美式焗烤芝士通心粉
+- Ingredients: 通心粉, 切达芝士, 黄油, 中筋面粉, 全脂牛奶, 盐, 黑胡椒粉, 面包糠
+- Tags: 芝士, 意面, 焗烤, 美式, comfort-food
+- Category: staple
+- Difficulty: easy
+- Time: 45 min
+- Summary: 美国家庭餐桌的灵魂料理——浓郁芝士白酱包裹弹牙通心粉，表面烤至金黄酥脆，每一口都是罪恶的满足。
+- 中文: https://tea-food-journal.vercel.app/recipes/mac-and-cheese
+- English: https://tea-food-journal.vercel.app/recipes/mac-and-cheese-en
 
 ### 肉霸薯条
 - Ingredients: 土豆, 玉米淀粉, 芝士碎, 盐, 黑胡椒, 猪肉末, 西红柿, 大蒜, 番茄酱, 生抽, 蚝油, 白糖, 芝士酱
