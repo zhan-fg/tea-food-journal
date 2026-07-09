@@ -25,7 +25,7 @@ Base URL: https://tea-food-journal.vercel.app
 3. Journal — Practice log recording real cooking experiences
 4. Knowledge — Educational articles about ingredients, techniques, culture
 
-## Recipe Catalog (25 recipes)
+## Recipe Catalog (28 recipes)
 
 ### 香蕉面包
 - Ingredients: 熟透香蕉, 低筋面粉, 鸡蛋, 细砂糖, 牛奶, 食用油, 泡打粉
@@ -197,6 +197,16 @@ Base URL: https://tea-food-journal.vercel.app
 - 中文: https://tea-food-journal.vercel.app/recipes/meat-monster-fries
 - English: https://tea-food-journal.vercel.app/recipes/meat-monster-fries-en
 
+### 经典美式肉饼
+- Ingredients: 牛肉碎, 面包糠, 鸡蛋, 洋葱, 牛奶, 番茄酱, 伍斯特酱, 大蒜粉, 盐, 黑胡椒
+- Tags: 美式, 肉, 焗烤, comfort-food
+- Category: home-cooking
+- Difficulty: easy
+- Time: 70 min
+- Summary: 美国家庭餐桌的经典——外裹酸甜番茄酱、内里多汁松软的焗烤肉饼，简单朴实却无比满足。
+- 中文: https://tea-food-journal.vercel.app/recipes/meatloaf
+- English: https://tea-food-journal.vercel.app/recipes/meatloaf-en
+
 ### 味噌三文鱼
 - Ingredients: 三文鱼排, 白味噌, 味醂, 清酒（或料酒）, 白糖, 酱油, 芝麻油, 白芝麻, 小葱
 - Tags: 日式, 三文鱼, 快手菜, 味噌
@@ -216,6 +226,16 @@ Base URL: https://tea-food-journal.vercel.app
 - Summary: 菠萝和排骨一起压12分钟，果香渗入骨髓，排骨软烂脱骨，酱汁浓稠酸甜。不用焯水更省事。
 - 中文: https://tea-food-journal.vercel.app/recipes/pineapple-ribs
 - English: https://tea-food-journal.vercel.app/recipes/pineapple-ribs-en
+
+### 手工披萨面团
+- Ingredients: 高筋面粉, 温水, 干酵母, 橄榄油, 盐, 糖
+- Tags: 披萨, 面团, 烘焙, 意大利
+- Category: staple
+- Difficulty: easy
+- Time: 120 min
+- Summary: 只需6种基础食材的手工披萨面团——外脆内软，比外卖好吃十倍，一次可做4张。
+- 中文: https://tea-food-journal.vercel.app/recipes/pizza-dough
+- English: https://tea-food-journal.vercel.app/recipes/pizza-dough-en
 
 ### 土豆片煎饼果子
 - Ingredients: 土豆, 鸡蛋, 淀粉肠, 火鸡面, 生菜, 大葱, 调味酱料
@@ -256,6 +276,16 @@ Base URL: https://tea-food-journal.vercel.app
 - Summary: 最简单的养生茶饮。红枣的天然甜味在长时间焖泡后充分释放，无需加糖。
 - 中文: https://tea-food-journal.vercel.app/recipes/red-date-tea
 - English: https://tea-food-journal.vercel.app/recipes/red-date-tea-en
+
+### 家常小炒
+- Ingredients: 鸡胸肉, 西兰花, 胡萝卜, 大蒜, 生抽, 蚝油, 料酒, 玉米淀粉, 食用油, 芝麻油
+- Tags: 小炒, 中式, 快手, 家常
+- Category: home-cooking
+- Difficulty: easy
+- Time: 20 min
+- Summary: 中式家常小炒的万能公式——任何肉类+蔬菜+酱汁，10分钟出锅，比外卖更快更健康。
+- 中文: https://tea-food-journal.vercel.app/recipes/stir-fry
+- English: https://tea-food-journal.vercel.app/recipes/stir-fry-en
 
 ### 寿司饭
 - Ingredients: 日式短粒米, 冷水, 米醋, 细砂糖, 盐
